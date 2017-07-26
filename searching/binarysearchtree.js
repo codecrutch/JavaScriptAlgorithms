@@ -48,10 +48,13 @@ function getHighestValue(tree) {
 }
 
 console.log("Largest:", getHighestValue(head));
+// ==> Largest: 30
 
+// Complexity for Unbalanced trees: O(n) time where n is the height of the tree.
+// Complexity for Balanced trees: O(n*logn) time where n is the height of the tree.
 function getSecondHighestValue(tree, previousValue) {
   previousValue = previousValue || tree.value;
-  // debugger
+
   if (tree.value > previousValue) {
     previousValue = tree.value;
   }
@@ -68,6 +71,7 @@ function getSecondHighestValue(tree, previousValue) {
 }
 
 console.log("Second largest:", getSecondHighestValue(head));
+// ==> Second largest: 26
 
 function printTree(node) {
   if (node) {
@@ -77,7 +81,8 @@ function printTree(node) {
   }
 }
 
-printTree(head);
+printTree(head); // ==> 5,17,10,20,19,23,24,25,26,30
+
 // module.exports = {
 //   BinaryTreeNode: BinaryTreeNode
 // }
